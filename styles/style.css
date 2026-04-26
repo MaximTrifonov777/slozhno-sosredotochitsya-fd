@@ -1,3 +1,4 @@
+/* style.css */
 .page {
   padding: var(--padding, 10px);
   background-image: var(--bg-image);
@@ -24,23 +25,23 @@
 }
 
 .decorated-zone::before {
-  inset-block-start: var(--gap, 20px);
-  inset-inline-end: var(--gap, 20px);
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
   border-block-start: 1px solid var(--decor-color, #ff0070);
   border-inline-end: 1px solid var(--decor-color, #ff0070);
 }
 
 .decorated-zone::after {
-  inset-block-end: var(--gap, 20px);
-  inset-inline-start: var(--gap, 20px);
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
   border-block-end: 1px solid var(--decor-color, #ff0070);
   border-inline-start: 1px solid var(--decor-color, #ff0070);
 }
 
 .header__rec {
   position: absolute;
-  inset-block-start: var(--gap, 20px);
-  inset-inline-end: calc(var(--gap, 20px) + 28px);
+  inset-block-start: 10px;
+  inset-inline-end: 19px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -70,14 +71,11 @@
   align-items: center;
   min-block-size: 668px;
   block-size: 100vh;
-  margin-inline: calc(-1 * var(--padding, 10px));
-  margin-block-start: calc(-1 * var(--padding, 10px));
-  padding: var(--padding, 10px);
+  padding: 10px;
 }
 
 .header__theme-menu {
   justify-self: end;
-  margin-block-start: var(--gap, 20px);
 }
 
 .header__theme-menu-list {
@@ -118,7 +116,6 @@
   justify-self: end;
   align-self: end;
   max-inline-size: 491px;
-  margin-block-end: var(--gap, 20px);
   font-weight: bold;
 }
 
@@ -198,7 +195,7 @@
   min-block-size: 668px;
   block-size: 100vh;
   margin-block-start: 40px;
-  padding: var(--padding, 10px);
+  padding: 10px;
 }
 
 .footer__title {
@@ -215,12 +212,24 @@
 }
 
 @media (width >= 768px) {
-  :root {
-    --padding: 20px;
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+
+  .header__rec {
+    inset-block-start: 20px;
+    inset-inline-end: 29px;
   }
 
   .header {
     min-block-size: 1024px;
+    padding: 20px;
   }
 
   .header__title {
@@ -289,6 +298,7 @@
 
   .footer {
     min-block-size: 1024px;
+    padding: 20px;
   }
 
   .footer__title {
@@ -303,11 +313,10 @@
 
   .header__theme-menu {
     justify-self: center;
-    margin-block-start: 0;
   }
 
   .section-why {
-    grid-template-columns: 0.8fr 2.2fr;
+    grid-template-columns: 1fr 2.1fr;
   }
 
   .footer {
