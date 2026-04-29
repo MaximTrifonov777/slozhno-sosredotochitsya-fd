@@ -4,7 +4,6 @@
   переключая тему
 */
 
-/* dark.css */
 :root.theme-dark {
   --bg-color: #000028;
   --text-color: #f1b2ce;
